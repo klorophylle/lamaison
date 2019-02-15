@@ -24,7 +24,7 @@ class ProductsTableSeeder extends Seeder
 
             // Ajout des images
             $link = str_random(12).'.jpg';
-            $file = file_get_contents('https://lorempixel.com/200/200/fashion/?random');
+            $file = file_get_contents('https://lorempixel.com/400/400/fashion');
             Storage::disk('local')->put($link, $file);
 
             $product->save(); // Il faut sauvegarder l'association pour faire persister en base de données
